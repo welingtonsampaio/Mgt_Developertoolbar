@@ -54,7 +54,7 @@ class Mgt_DeveloperToolbar_Block_Toolbar extends Mgt_DeveloperToolbar_Block_Temp
     
     public function isActive()
     {
-        $isActive = (int)Mage::getConfig()->getNode(self::XML_PATH_MGT_DEVELOPERTOOLBAR_ACTIVE);
+        $isActive = (int)Mage::getConfig()->getNode(self::XML_PATH_MGT_DEVELOPERTOOLBAR_ACTIVE) || $_SERVER['DEVELOPMENT'];
         return $isActive;
     }
     
